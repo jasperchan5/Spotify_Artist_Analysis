@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "build": "cd frontend && yarn build",
+    "test": "cd frontend && yarn test",
+    "eject": "cd frontend && yarn eject",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.0",
+    "@babel/plugin-transform-arrow-functions": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "dotenv-defaults": "^3.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.0.13",
+    "node-fetch": "^3.2.3",
+    "nodemon": "^2.0.15",
+    "spotify-web-api-js": "^1.5.2",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}

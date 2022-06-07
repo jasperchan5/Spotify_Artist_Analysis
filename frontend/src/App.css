@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&family=M+PLUS+1p&family=Rock+Salt&display=swap');
+
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: #282c34;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.spotify_logo{
+  width: 20%;
+  height: 100px;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.title{
+  width: 35%;
+  font-size: 1.25cm;
+  text-align: center;
+  color: #61cf88;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: 'Rock Salt', cursive;
+}
+
+.artist_search_bar{
+  width:45%;
+  height: 100px;
+  background-color: #282c34;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.artist_search_bar_semi_circle{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.artist_search_bar_rectangle{
+  width: 600px;
+  height: 78px;
+  border-radius: 0px;
+  margin-left: -45px;
+  margin-right: -45px;
+  background-color: #ffffff;
+  border: 0 transparent;
+  font-size: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  color: #282c34;
+}
+
+.artist_search_bar_icon{
+  width: 30px;
+  height: 30px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 0 transparent;
+  cursor: pointer;
+}
+
+.divide_line{
+  width: 100%;
+  height: 1px;
+  background-color: #b3b3b3;
+  opacity: 0.5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.artist_carousel_arrow_left{
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 0 transparent;
+  cursor: pointer;
+  opacity: 0.75;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+}
+
+.artist_carousel_side_image{
+  width: 320px;
+  height: 320px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 0 transparent;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.artist_carousel_arrow_right{
+  width: 50px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 0 transparent;
+  cursor: pointer;
+  opacity: 0.75;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+}
+
+.artist_carousel_arrow_left:hover, .artist_carousel_arrow_right:hover{
+  opacity: 1;
+}
+
+.artist_photo_name_container{
+  width: 640px;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: width 0.5s, height 0.5s, margin 1s;
+  margin-left: calc(100% / 2 - 320px);
+}
+
+.artist_photo_name_container:hover{
+  opacity: 0.6;
+  width: 660px;
+  height: 660px;
+}
+
+.artist_photo{
+  width: 100%;
+  height: 100%;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  opacity: 0.5;
+}
+
+.artist_name{
+  font-size: 1.2cm;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.artist_name.side{
+  font-size: 0.75cm;
+}
+
+.artist_click_animation{
+  margin: 0%;
+  width: 480px;
+  height: 480px;
+}
+
+.artist_click_animation:hover{
+  margin: 0%;
+  width: 500px;
+  height: 500px;
+}
+
+.artist_info_title{
+  font-size: 1.5cm;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  display: flex;
+  opacity: 0;
+  transition: opacity 2s;
+  transition-delay: 2s;
+  padding-bottom: 10px;
+}
+
+.artist_info_title.appear{
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.col_left{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: width 0.001s;
+}
+
+.col_left.collapse{
+  width: 30%;
+  transition: width 1s;
+}
+
+.col_right{
+  width: 0%;
+  transition: width 0.001s;
+}
+
+.col_right.expand{
+  width: 70%;
+  transition: width 1s;
+}
+
+.artist_top_tracks_frame{
+  width: 100%;
+  height: 40px;
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(#32363f,#252936);
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 400;
+}
+
+.artist_top_tracks{
+  font-size: 0.55cm;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #ffffff; 
+}
