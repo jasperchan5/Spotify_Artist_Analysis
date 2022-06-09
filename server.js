@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use('/backend', router);
 app.use('/backend/getArtist', router);
 app.use('/backend/getTracks', router);
+app.use('/backend/getAlbums', router);
 app.use(express.static(path.join(__dirname, "frontend", "build")));
 app.get("/*", (_, res) => {
   res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));

@@ -41,7 +41,6 @@ router.get('/getArtist', async(req,res) => {
     spotifyApi.setAccessToken(token);
     const artistData = await spotifyApi.search(artistName,['artist']);
     const data = artistData.body.artists.items.slice(0,3);
-    console.log(data);
     res.status(200).send({artistInfo: data});
 })
 
@@ -50,6 +49,14 @@ router.get('/getTracks', async(req,res) => {
     spotifyApi.setAccessToken(token);
     const tracks = await spotifyApi.getArtistTopTracks(artistID, 'US');
     res.status(200).send({topTracks: tracks.body.tracks});
+})
+
+router.get('/getAlbums', async(req,res) => {
+    const artistID = req.query.artistID;
+    spotifyApi.setAccessToken(token);
+    const albums = await spotifyApi.getArtistAlbums(artistID);
+    console.log(albums.body.items);
+    res.status(200).send({albums: albums.body.items});
 })
 
 export default router;

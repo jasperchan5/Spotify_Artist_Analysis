@@ -49,7 +49,6 @@ export default () => {
                 <img className='spotify_logo' src={green_logo} onClick={handleReset}></img>
                 <div className='title'>Artist Analysis</div>
                 <div className='artist_search_bar'>
-                    <div className='artist_search_bar_semi_circle'></div>
                     <input 
                         placeholder="Search for an artist..." 
                         className='artist_search_bar_rectangle'
@@ -61,9 +60,7 @@ export default () => {
                             }
                         }}
                     ></input>
-                    <div className='artist_search_bar_semi_circle'>
-                        <img className="artist_search_bar_icon" src={search_icon} onClick={handleSearch}></img>
-                    </div>
+                    <img className="artist_search_bar_icon" src={search_icon} onClick={handleSearch}></img>
                 </div>
             </div>
         </>
